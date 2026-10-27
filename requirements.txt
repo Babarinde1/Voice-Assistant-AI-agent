@@ -1,0 +1,39 @@
+# Stage 1 (local commands) needs nothing beyond the Python standard library.
+#
+# Stage 2 (optional, AI fallback):
+#   openai        - talks to any OpenAI-compatible endpoint (cloud or local server)
+#   python-dotenv - reads your settings from a .env file
+openai
+python-dotenv
+
+# Stage 3 (optional, voice input):
+#   faster-whisper - local speech-to-text (downloads a model on first use)
+#   sounddevice    - records from the microphone
+#   numpy          - audio arrays
+# Typed commands keep working if these are not installed.
+faster-whisper
+sounddevice
+numpy
+
+# Stage 4 (optional, local wake-word detection):
+openwakeword
+
+# Stage 5: local offline text-to-speech (Windows SAPI5)
+pyttsx3
+
+# Stage 7: universal app launching and voice typing
+pyautogui
+pyperclip
+pygetwindow
+
+# Stage 8: screenshots, and the transparent colorful orb
+pillow
+# Optional but recommended for the transparent orb (about 80 MB). Without it the
+# simple orb is used automatically.
+PySide6-Essentials
+
+# Stage 9: agent tools
+# psutil     - CPU usage for "how busy is my computer"
+# send2trash - deleting goes to the Recycle Bin (only used if ALLOW_FILE_DELETION=true)
+psutil
+send2trash
